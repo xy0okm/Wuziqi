@@ -1,13 +1,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/bg">
+    android:gravity="center">
 
-    <com.fhlj.wuzichess.WuziqiPanel
-        android:id="@+id/action_settings"
-        android:layout_centerInParent="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fistpage_button_margin"
+            android:onClick="startManMan"
+            android:text="@string/game_man_man"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fistpage_button_margin"
+            android:onClick="startManMachine"
+            android:text="@string/game_man_machine"/>
+    </LinearLayout>
 </RelativeLayout>

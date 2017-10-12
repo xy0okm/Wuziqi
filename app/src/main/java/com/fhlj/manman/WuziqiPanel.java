@@ -1,7 +1,4 @@
-package com.fhlj.wuzichess;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.fhlj.manman;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,6 +11,11 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+
+import com.fhlj.wuzichess.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class WuziqiPanel extends View {
 	private int mPanelWidth;

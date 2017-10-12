@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_title_top_margin"
+        android:layout_marginBottom="@dimen/top_title_boottom_margin"
+        android:textSize="@dimen/top_title_textsize"
+        android:textColor="@color/color_top_title"
+        android:text="@string/game_man_man"/>
+
+    <com.fhlj.manman.WuziqiPanel
+        android:id="@+id/action_settings"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
