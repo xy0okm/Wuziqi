@@ -85,7 +85,7 @@ class AI{
         for(i = 1; i <= ConstantUtil.MAX_LINE; i++){
             for(j = 1; j <= ConstantUtil.MAX_LINE; j++){
                 if(checkIsEmptyPoint(i, j)){
-                    EmptyPointList.add(new Point(i / ConstantUtil.perLineWidth, j / ConstantUtil.perLineWidth));
+                    EmptyPointList.add(new Point(i, j));
                 }
             }
         }

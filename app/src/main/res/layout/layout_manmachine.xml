@@ -10,6 +10,7 @@
         android:layout_marginTop="@dimen/top_title_top_margin"
         android:layout_marginBottom="@dimen/top_title_boottom_margin"
         android:textSize="@dimen/top_title_textsize"
+        android:layout_gravity="center_horizontal"
         android:textColor="@color/color_top_title"
         android:text="@string/game_man_machine"/>
 

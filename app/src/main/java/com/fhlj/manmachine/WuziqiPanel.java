@@ -7,6 +7,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -65,10 +67,36 @@ public class WuziqiPanel extends View {
 			}
 			whiteList.add(p);
 			invalidate();
-			blackList.add(AI.getInstance().getAIStep(blackList, whiteList));
+			new ownStepThread().start();
 		}
 		return true;
 	}
+
+	public class ownStepThread extends Thread{
+		@Override
+		public void run() {
+			try {
+				sleep(1000);
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+			if (!mIsGemOver){
+				blackList.add(AI.getInstance().getAIStep(blackList, whiteList));
+				refreshHandler.sendEmptyMessage(1);
+			}
+		}
+	}
+
+	public Handler refreshHandler = new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what){
+				case 1:
+					invalidate();
+					break;
+			}
+		}
+	};
 
 	private Point getVaLidPoint(int x, int y) {
 		return new Point((int) (x / mLineHight), (int) (y / mLineHight));
